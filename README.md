@@ -2,6 +2,6 @@
 Repositorio P3 Métodos Computacionales en Obras Civiles
 
 
-- Integragntes:
-Joaquín Guzmán Ossandón
-Paula Villalobos Bradanovic
+# Integragntes:
+- Joaquín Guzmán Ossandón
+- Paula Villalobos Bradanovic
