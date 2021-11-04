@@ -1,5 +1,5 @@
 # MCOC2021-P3-Grupo03
-Repositorio P3 Métodos Computacionales en Obras Civiles
+Proyecto 3 "Evaluación de Américo Vespucio Oriente" Métodos Computacionales en Obras Civiles
 
 
 # Integragntes:
