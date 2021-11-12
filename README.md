@@ -6,6 +6,13 @@ Proyecto 3 "Evaluación de Américo Vespucio Oriente" Métodos Computacionales e
 - Joaquín Guzmán Ossandón
 - Paula Villalobos Bradanovic
 
+# P3 E3
+
+ - Mapa Joaquín Guzmán 
+
+![mapa_jg](https://user-images.githubusercontent.com/62270417/141528825-12caef80-ebe3-483f-8e33-6ad883e25e63.png)
+
+ - Mapa Paula Villalobos 
 
 # P3 E2
 
