@@ -13,6 +13,9 @@ Proyecto 3 "Evaluación de Américo Vespucio Oriente" Métodos Computacionales e
 ![mapa_jg](https://user-images.githubusercontent.com/62270417/141528825-12caef80-ebe3-483f-8e33-6ad883e25e63.png)
 
  - Mapa Paula Villalobos 
+ 
+![mapacomuna](https://user-images.githubusercontent.com/88356859/141600622-59998ad3-c7ea-4ea2-983d-0fdfda06ab91.png)
+
 
 # P3 E2
 
