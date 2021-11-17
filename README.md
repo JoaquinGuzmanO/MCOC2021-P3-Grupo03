@@ -5,7 +5,54 @@ Proyecto 3 "Evaluación de Américo Vespucio Oriente" Métodos Computacionales e
 # Integragntes:
 - Joaquín Guzmán Ossandón
 - Paula Villalobos Bradanovic
+# P3 E4
 
+ - Flujo en cada arco
+ 
+![Flujo en cada arco](https://user-images.githubusercontent.com/62270417/142104249-58fc64e5-7a16-4b53-a5d7-f8205cecf0c7.PNG)
+ 
+ - Costo de cada arco
+ 
+![costo de cada arco](https://user-images.githubusercontent.com/62270417/142105026-6562b256-6f18-4ba4-889c-eac673a12909.PNG)
+
+ - Funciones de costo de cada arco
+
+![Funciones de costo por arco](https://user-images.githubusercontent.com/62270417/142105267-4953c21c-ba33-4b85-b7f4-0c797230c54b.PNG)
+
+ - Error de cada arco, de forma de demostrar el cumplimiento del equilibrio de Wardrop
+ 
+![errores](https://user-images.githubusercontent.com/62270417/142106140-e46d8981-1fad-430f-9b65-ed4ee2ebe757.PNG)
+ 
+El qeuilibrio se consiguio a traves del suguinte codigo, el cual va iterando la matriz origen destino hasta lograr que los viajes entre zonas
+sean iguales a 0 hasta que ya no exista una demanda actual.
+
+```python
+while True:
+
+	se_asigno_demanda = False
+
+	for key in OD:
+		origen = key[0]
+		destino = key[1]
+		demanda_actual = OD[key]
+		demanda_target = OD_target[key]
+
+		if demanda_actual > 0:
+			path = dijkstra_path(G,origen,destino,weight=costo)
+			Nparadas = len(path)
+
+			for i_parada in range(Nparadas-1):
+				o = path[i_parada]
+				d = path[i_parada+1]
+				flujo_antes = G.edges[o,d]["flujo"]
+				G.edges[o,d]["flujo"] += 1
+
+			OD[key] -= 1
+			se_asigno_demanda = True
+
+	if not se_asigno_demanda:
+		break
+```
 # P3 E3
 
  - Mapa Joaquín Guzmán 
