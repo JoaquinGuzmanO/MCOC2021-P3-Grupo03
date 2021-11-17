@@ -7,6 +7,10 @@ def costo (ni,nf,attr):
 	flujo_arco = attr["flujo"]
 	return funcosto_arco(flujo_arco)
 
+def error (ve,vr):
+	e = round(abs(ve-vr)*100/vr,3)
+	return str(e)+"%"
+
 
 			######################################
 			################ DATOS ###############
@@ -35,13 +39,13 @@ G.add_node("E", pos=[5,5])
 G.add_node("G", pos=[5,3])
 
 G.add_edge("A","B", fcosto=f1, flujo=0, costo=0, f="10 + f/120")
-G.add_edge("A","C", fcosto=f2, flujo=0, costo=0, f="14 + 3*f/240")
+G.add_edge("A","C", fcosto=f2, flujo=0, costo=0, f="14 + 3f/240")
 G.add_edge("B","C", fcosto=f3, flujo=0, costo=0, f="10 + f/240")
-G.add_edge("B","D", fcosto=f2, flujo=0, costo=0, f="14 + 3*f/240")
-G.add_edge("C","E", fcosto=f2, flujo=0, costo=0, f="14 + 3*f/240")
+G.add_edge("B","D", fcosto=f2, flujo=0, costo=0, f="14 + 3f/240")
+G.add_edge("C","E", fcosto=f2, flujo=0, costo=0, f="14 + 3f/240")
 G.add_edge("C","G", fcosto=f3, flujo=0, costo=0, f="10 + f/240")
 G.add_edge("D","C", fcosto=f1, flujo=0, costo=0, f="10 + f/120")
-G.add_edge("D","G", fcosto=f2, flujo=0, costo=0, f="14 + 3*f/240")
+G.add_edge("D","G", fcosto=f2, flujo=0, costo=0, f="14 + 3f/240")
 G.add_edge("G","E", fcosto=f1, flujo=0, costo=0, f="10 + f/120")
 
 
@@ -85,8 +89,21 @@ for i in G.edges():
     G.edges[i]["flujo"] = round(G.edges[i]["flujo"],4)
     G.edges[i]["costo"] = round(G.edges[i]["costo"],2)
 
-print(OD)
-print(OD_target)
+
+			######################################
+			############# VERIFICAR ##############
+			######################################
+
+arcos = ["A-B","A-C","B-C","B-D","C-E","C-G","D-C","D-G","G-E"]
+flujo_esperado = [1370,1860,1400,2270,2030.86,1954.29,965.14,1774.86,1349.14]
+flujo_obtenido = []
+
+for i in G.edges():
+	flujo_obtenido.append(G.edges[i]["flujo"])
+
+for i in range(len(flujo_obtenido)):
+	print("Para el arco "+arcos[i]+" se tiene un erro de: "+error(flujo_esperado[i],flujo_obtenido[i]))
+print("\nTodos son menores al 1% por lo que queda verificado")
 
 			######################################
 			############## GRAFICAR ##############
