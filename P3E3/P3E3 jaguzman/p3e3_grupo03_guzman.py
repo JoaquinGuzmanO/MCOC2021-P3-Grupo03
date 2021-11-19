@@ -26,7 +26,7 @@ gdf_cortado = gps.clip(gdf_edges, all_zonas)
 gdf_motorway = gdf_cortado[gdf_cortado.highway=="motorway"]
 gdf_secondary = gdf_cortado[gdf_cortado.highway=="secondary"]
 gdf_tertiary = gdf_cortado[gdf_cortado.highway=="tertiary"]
-gdf_primnary = gdf_cortado[gdf_cortado.highway=="primnary"]
+gdf_primary = gdf_cortado[gdf_cortado.highway=="primary"]
 gdf_residential = gdf_cortado[gdf_cortado.highway=="residential"]
 
                 ####### GRAFICAR #######
@@ -37,7 +37,7 @@ zona_central.plot(ax=ax,color="#FFB2B2")
 gdf_motorway.plot(ax=ax,color="red")
 gdf_secondary.plot(ax=ax,color="yellow")
 gdf_tertiary.plot(ax=ax,color="blue")
-gdf_primnary.plot(ax=ax,color="green")
+gdf_primary.plot(ax=ax,color="green")
 gdf_residential.plot(ax=ax,color="black")
 
 plt.title("Zona Las Condes: [293] vecinas: [292,296,295,303,305,269,265,270,322]\n")
