@@ -5,6 +5,19 @@ Proyecto 3 "Evaluación de Américo Vespucio Oriente" Métodos Computacionales e
 # Integragntes:
 - Joaquín Guzmán Ossandón
 - Paula Villalobos Bradanovic
+
+# P3 E5
+
+- ¿Cómo seleccionó las zonas a incluir?
+En primer lugar se seleccionaron las zonas abarcadas por AVO, luego las zonas vecinas a estas, y por utlimo, segun la EOD, se seleccionaron las zonas de origen cuyo destino era alguna zona seleccionada anteriormente.
+
+- ¿Cuántas zonas quedaron seleccionadas son?
+Se seleccionaron 207 zonas
+
+- Mapa
+![PHOTO-2021-11-19-17-00-32](https://user-images.githubusercontent.com/88356859/142706130-5378c5c7-b1f7-4ed4-8d26-2ac8d1b16e94.jpg)
+
+
 # P3 E4
 
  - Flujo en cada arco
